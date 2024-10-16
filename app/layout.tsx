@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
-import './globals.css';
+import '@/shared/styles/globals.css';
+import Header from '@/shared/layout/components/Header';
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -8,7 +9,10 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang='cs'>
-      <body className='antialiased'>{children}</body>
+      <body className='antialiased'>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 };
