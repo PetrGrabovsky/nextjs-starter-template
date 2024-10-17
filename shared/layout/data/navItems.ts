@@ -1,14 +1,7 @@
-import { IconType } from 'react-icons';
+import { NavItem } from '../types/NavItem';
 import { HomeIcon } from './icons';
 import { GenericIcon } from './icons';
 import { ContactIcon } from './icons';
-
-interface NavItem {
-  id: number;
-  href: string;
-  label: string;
-  Icon: IconType;
-}
 
 export const navItems: NavItem[] = [
   { id: 1, href: '/', label: 'Home', Icon: HomeIcon },
