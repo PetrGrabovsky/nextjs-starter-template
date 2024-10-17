@@ -13,9 +13,11 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang='cs'>
-      <body className={`${inter.className} antialiased`}>
+      <body
+        className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden antialiased`}
+      >
         <Header />
-        {children}
+        <main className='flex-grow'>{children}</main>
         <Footer />
       </body>
     </html>
