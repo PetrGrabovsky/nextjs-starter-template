@@ -3,6 +3,7 @@ import { FC, ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import Header from '@/shared/layout/components/Header';
 import Footer from '@/shared/layout/components/Footer';
+import AppStateProvider from '@/shared/providers/AppStateProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,9 +17,11 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       <body
         className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden antialiased`}
       >
-        <Header />
-        <main className='flex-grow'>{children}</main>
-        <Footer />
+        <AppStateProvider>
+          <Header />
+          <main className='flex-grow'>{children}</main>
+          <Footer />
+        </AppStateProvider>
       </body>
     </html>
   );
