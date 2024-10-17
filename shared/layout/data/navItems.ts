@@ -1,4 +1,4 @@
-import { NavItem } from '../types/NavItem';
+import { NavItem } from '../types/navItem';
 import { HomeIcon } from './icons';
 import { GenericIcon } from './icons';
 import { ContactIcon } from './icons';
