@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Header from '@/shared/layout/components/Header';
 import Footer from '@/shared/layout/components/Footer';
 import AppStateProvider from '@/shared/providers/AppStateProvider';
+import ClientResizeHandler from '@/shared/layout/utils/ClientResizeHandler';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
           <Header />
           <main className='flex-grow'>{children}</main>
           <Footer />
+          <ClientResizeHandler />
         </AppStateProvider>
       </body>
     </html>
